@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Stuff : PooledObject {
+public class Stuff : PooledObject
+{
 
     public Rigidbody Body { get; private set; }
     MeshRenderer[] meshRenderers;
@@ -26,8 +27,5 @@ public class Stuff : PooledObject {
             meshRenderers[i].material = m;
         }
     }
-    private void OnLevelWasLoaded(int level)
-    {
-        ReturnToPool();
-    }
 }
+    
